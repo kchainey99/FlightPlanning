@@ -4,7 +4,7 @@ public class City{
 	String name;
 	protected Boolean isVisited;
 	
-	// Weighted Edge holding source & destination cities and cost & time for a leg.
+	// City is simply a node where we can track whether or not that node has been visited
 	public City(String city) {
 		name = city;
 		isVisited = false;
@@ -15,6 +15,7 @@ public class City{
 	}
 	
 	@Override
+	//override default equals method & return a comparison of two city objects
 	public boolean equals(Object o) {
 		if (o instanceof City){
 			City c = (City)o;
